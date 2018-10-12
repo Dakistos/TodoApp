@@ -1,33 +1,3 @@
-<!-- <ion-header>
-    <ion-navbar>
-        <ion-title>
-            Todo
-        </ion-title>
-    </ion-navbar>
-</ion-header>
-
-<ion-content>
-    <ion-item>
-        <ion-input required [(ngModel)]="todo" placeholder="Ajouter une tâche" type="text"></ion-input>
-    </ion-item>
-
-    <button ion-button full (click)="add()">Ajouter</button>
-
-    <ion-list>
-        <ion-item-sliding *ngFor="let t of todos">
-            <ion-item>
-                {{t}}
-            </ion-item>
-
-            <ion-item-options side="right">
-                <button ion-button color="danger" (click)="delete(t)">
-                    <ion-icon name="trash"></ion-icon>Delete
-                </button>
-            </ion-item-options>
-        </ion-item-sliding>
-    </ion-list>
-</ion-content> -->
-
 <ion-header>
     <ion-navbar>
         <ion-title>ToDo</ion-title>
@@ -42,12 +12,12 @@
 <ion-content>
     <ion-list>
         <ion-item-sliding *ngFor="let item of Items">
-            <ion-item>
+            <ion-item>  
                 <h2>{{item.title}}</h2>
                 <p>{{item.about}}</p>
-        </ion-item>
+            </ion-item>
         <ion-item-options side="right">
-            <button ion-button color="danger" (click)="delete(t)">
+            <button ion-button color="danger" (click)="delete(item)">
                 <ion-icon name="trash"></ion-icon>Delete
             </button>
         </ion-item-options>

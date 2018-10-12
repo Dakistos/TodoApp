@@ -13,7 +13,6 @@ export class HomePage {
    constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
 
   }
-
    ionViewDidLoad(){
   }
 
@@ -32,9 +31,9 @@ export class HomePage {
    }
 
    delete(item){
-     var index = this.item.indexOf(item, 0);
+     let index = this.Items.indexOf(item, 0);
        if(index > -1){
-         this.items.splice(index, 1);
+         this.Items.splice(index, 1);
        }
-  }
+    }
 }
