@@ -1,14 +1,56 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+<!-- <ion-header>
+    <ion-navbar>
+        <ion-title>
+            Todo
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+    <ion-item>
+        <ion-input required [(ngModel)]="todo" placeholder="Ajouter une tâche" type="text"></ion-input>
+    </ion-item>
+
+    <button ion-button full (click)="add()">Ajouter</button>
+
+    <ion-list>
+        <ion-item-sliding *ngFor="let t of todos">
+            <ion-item>
+                {{t}}
+            </ion-item>
+
+            <ion-item-options side="right">
+                <button ion-button color="danger" (click)="delete(t)">
+                    <ion-icon name="trash"></ion-icon>Delete
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content> -->
+
+<ion-header>
+    <ion-navbar>
+        <ion-title>ToDo</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="addItem()">
+                <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item-sliding *ngFor="let item of Items">
+            <ion-item>
+                <h2>{{item.title}}</h2>
+                <p>{{item.about}}</p>
+        </ion-item>
+        <ion-item-options side="right">
+            <button ion-button color="danger" (click)="delete(t)">
+                <ion-icon name="trash"></ion-icon>Delete
+            </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
 </ion-content>

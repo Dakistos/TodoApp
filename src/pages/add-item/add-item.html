@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>
+            Nouvelle tâche
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)=close()>
+        <ion-icon name="close"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label>Titre de tâche</ion-label>
+            <ion-input type="text" [(ngModel)]="title"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Description</ion-label>
+            <ion-input type="textbox" [(ngModel)]="about"></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <button full ion-button (click)=saveItem()>
+      Ajouter
+    </button>
+</ion-content>
